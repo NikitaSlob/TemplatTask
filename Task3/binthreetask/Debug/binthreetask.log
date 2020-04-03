@@ -1,0 +1,9 @@
+﻿  binthreetask.cpp
+d:\practic\task3\binthreetask\binthree.cpp(157): warning C4018: <: несоответствие типов со знаком и без знака
+  d:\practic\task3\binthreetask\binthree.cpp(156): note: при компиляции функции-члена "<Нет данных>" класса класс <Нет данных>
+  d:\practic\task3\binthreetask\binthreetask.cpp(16): note: выполняется компиляция ссылки на экземпляр шаблон функции "void BinThree<int>::Printl(void)"
+  d:\practic\task3\binthreetask\binthreetask.cpp(8): note: выполняется компиляция ссылки на экземпляр шаблон класс "BinThree<int>"
+d:\practic\task3\binthreetask\binthree.cpp(110): warning C4018: <: несоответствие типов со знаком и без знака
+  d:\practic\task3\binthreetask\binthree.cpp(109): note: при компиляции функции-члена "<Нет данных>" класса класс <Нет данных>
+  d:\practic\task3\binthreetask\binthreetask.cpp(15): note: выполняется компиляция ссылки на экземпляр шаблон функции "void BinThree<int>::Print(void)"
+  binthreetask.vcxproj -> D:\Practic\Task3\Debug\binthreetask.exe
