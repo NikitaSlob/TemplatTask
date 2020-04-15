@@ -13,7 +13,7 @@ int main()
 	while (!st3.thisstack.empty())
 	{
 		cout << st3.thisstack.top() << ' ';
-		st3.Pop(st3.thisstack.top());
+		st3.Pop();
 	}
 }
 

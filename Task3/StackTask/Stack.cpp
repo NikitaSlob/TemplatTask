@@ -16,17 +16,12 @@ public:
 		thisstack.push(a);
 		if (thisstack.size() > this->length)
 		{
-			Pop(a);
+			Pop();
 			throw new exception("SetOverflow");
 		}
 	}
-	void Pop(t a)
+	void Pop()
 	{
-		while (thisstack.top() != a)
-		{
-			thisstack.push(thisstack.top());
-			thisstack.pop();
-		}
 		thisstack.pop();
 
 	}
