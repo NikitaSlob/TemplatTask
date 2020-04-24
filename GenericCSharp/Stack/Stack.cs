@@ -31,7 +31,8 @@ namespace Stack
         }
         public void Pop()
         {
-            thisstack.Pop();
+            if(thisstack.Count>0)
+                thisstack.Pop();
 
         }
         public StackCl(StackCl<T> s1, StackCl<T> s2)

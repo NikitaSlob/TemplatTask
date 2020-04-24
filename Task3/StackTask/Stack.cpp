@@ -22,7 +22,8 @@ public:
 	}
 	void Pop()
 	{
-		thisstack.pop();
+		if(!thisstack.empty())
+			thisstack.pop();
 
 	}
 	Stack(Stack<t> s1, Stack<t> s2)

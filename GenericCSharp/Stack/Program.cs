@@ -25,6 +25,7 @@ namespace Stack
             StackCl<string> st4 = new StackCl<string>(8);
             st4.Push("1");
             st4.Pop();
+            st4.Pop();
         }
     }
 }
