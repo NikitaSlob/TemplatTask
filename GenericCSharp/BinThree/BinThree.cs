@@ -17,7 +17,7 @@ namespace BinThree
             this.parent = parent;
         }
 
-        public void add(T val)
+        public void Add(T val)
         {
             if (val.CompareTo(this.val) < 0)
             {
@@ -26,7 +26,7 @@ namespace BinThree
                     this.left = new BinTree<T>(val, this);
                 }
                 else if (this.left != null)
-                    this.left.add(val);
+                    this.left.Add(val);
             }
             else
             {
@@ -35,30 +35,30 @@ namespace BinThree
                     this.right = new BinTree<T>(val, this);
                 }
                 else if (this.right != null)
-                    this.right.add(val);
+                    this.right.Add(val);
             }
         }
 
-        private BinTree<T> _search(BinTree<T> tree, T val)
+        private BinTree<T> _Search(BinTree<T> tree, T val)
         {
             if (tree == null) return null;
             switch (val.CompareTo(tree.val))
             {
-                case 1: return _search(tree.right, val);
-                case -1: return _search(tree.left, val);
+                case 1: return _Search(tree.right, val);
+                case -1: return _Search(tree.left, val);
                 case 0: return tree;
                 default: return null;
             }
         }
 
-        public BinTree<T> search(T val)
+        public BinTree<T> Search(T val)
         {
-            return _search(this, val);
+            return _Search(this, val);
         }
 
-        public bool remove(T val)
+        public bool Remove(T val)
         {
-            BinTree<T> tree = search(val);
+            BinTree<T> tree = Search(val);
             if (tree == null)
             {
                 return false;
@@ -77,7 +77,7 @@ namespace BinThree
                     curTree = curTree.left;
                 }
                 T temp = curTree.val;
-                this.remove(temp);
+                this.Remove(temp);
                 tree.val = temp;
 
                 return true;
@@ -169,19 +169,19 @@ namespace BinThree
             }
             return false;
         }
-        private void _print(BinTree<T> node)
+        private void _Print(BinTree<T> node)
         {
             if (node == null) return;
-            _print(node.left);
+            _Print(node.left);
             listForPrint.Add(node.val);
             Console.Write(node + " ");
             if (node.right != null)
-                _print(node.right);
+                _Print(node.right);
         }
-        public void print()
+        public void Print()
         {
             listForPrint.Clear();
-            _print(this);
+            _Print(this);
             Console.WriteLine();
         }
 
